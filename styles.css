@@ -33,6 +33,7 @@ body{
     color:#fff;
 }
 .eyebrow{
+    padding-top: 16px;
     color:var(--color-accent);
     font-weight:700;
 }
