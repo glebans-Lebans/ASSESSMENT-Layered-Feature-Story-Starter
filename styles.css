@@ -101,11 +101,31 @@ img{
     padding:1rem;
     background:#f1f1f1;
 }
-@media (min-width:52rem){
+.contributors{
+    align-self:start;
+    padding:1rem;
+    border:1px solid var(--color-border);
+}
+.contributors img{
+    width: 250px;
+}
+.c-images {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+@media (min-width:58rem){
     main{
-        grid-template-columns:14rem 1fr;
+        grid-template-columns:14rem 1fr 11rem;
     }
     .story-guide{
+        position:sticky;
+        inset-block-start:1rem;
+        z-index:var(--layer-sticky);
+        width: 20ch;
+    }
+    .contributors{
         position:sticky;
         inset-block-start:1rem;
         z-index:var(--layer-sticky);
