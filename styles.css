@@ -1,4 +1,8 @@
-:root{
+/* CSS by Grant Lebans */
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+/* :root{
     --color-text:#404040;
     --color-surface:#fff;
     --color-action:#8c1d40;
@@ -12,7 +16,38 @@
     --layer-raised:10;
     --layer-sticky:20;
     --layer-overlay:30;
+} */
+
+:root {
+    --off-white: #e8edd1;
+    --light-green: #dff2af;
+    --green: #6da08f;
+    --blue-gray: #4c5d75;
+    --dark-blue-gray: #333e4e;
+    --gray: #888888;
+    --dark-gray: #2c2e31;
+    --white: #ffffff;
+    --bg-color: var(--off-white);
+    --card-callout: var(--light-green);
+    --font-color: var(--dark-gray);
+    --dk-bg-color: var(--dark-gray);
+    --dk-font-color: var(--off-white);
+    --border-color: var(--dark-gray);
+    --gradient: linear-gradient(transparent 80%, var(--light-green));
+    --space: 1rem;
+    --space-aside: 0.5rem;
+    --space-card: 1rem;
+    --border-radius: 0.5rem;
+    --btt-radius: 4rem;
+    --drop-shadow: 3px 3px 3px var(--dark-blue-gray);
+    --heading-font: "Rampart One", Arial, sans-serif;
+    --content-font: Arial, sans-serif;
+    --font-size: 16em;
+    --line-height: 1.6;
+    --bold-font: 700;
+    --content-width: 68ch;
 }
+
 *,*::before,*::after{
     box-sizing:border-box;
 }
@@ -21,24 +56,37 @@ html{
 }
 body{
     margin:0;
-    color:var(--color-text);
-    background:var(--color-surface);
-    font-family:Arial,sans-serif;
-    line-height:1.6;
+    color:var(--font-color);
+    background:var(--bg-color);
+    background-image: var(--gradient);
+    font-family:var(--content-font);
+    line-height:var(--line-height);
+}
+h1, h2, h3{
+    font-family: var(--heading-font);
+}
+h1 {
+    color: var(--off-white);
+}
+h2, h3 {
+    color: var(--dark-blue-gray);
 }
 .feature-header{
     position:relative;
     padding:clamp(2rem,7vw,6rem);
-    background:var(--color-action);
-    color:#fff;
+    background:var(--dark-blue-gray);
+    color: var(--white);
+}
+.feature-header h2{
+    color: var(--light-green);
 }
 .eyebrow{
     padding-top: 16px;
-    color:var(--color-accent);
-    font-weight:700;
+    color:var(--light-green);
+    font-weight:var(--bold-font);
 }
 .lede{
-    max-width:var(--measure);
+    max-width:var(--content-width);
     font-size:1.25rem;
 }
 .issue-badge{
@@ -46,15 +94,15 @@ body{
     inset-block-start:1rem;
     inset-inline-end:1rem;
     padding:.5rem;
-    background:var(--color-accent);
-    color:#191919;
+    background:var(--light-green);
+    color: var(--font-color);
 }
 main{
     display:grid;
     gap:2rem;
     max-width:72rem;
     margin:auto;
-    padding:var(--space-3);
+    padding:var(--space);
 }
 article{
     min-width:0;
@@ -67,7 +115,8 @@ article section{
 .story-guide{
     align-self:start;
     padding:1rem;
-    border:1px solid var(--color-border);
+    border:1px solid var(--border-color);
+    background: var(--white);
 }
 .story-guide a{
     display:block;
@@ -77,8 +126,8 @@ article section{
     position:relative;
     margin:0;
     padding:1rem;
-    border:1px solid var(--color-border);
-    border-radius:var(--radius);
+    border:1px solid var(--border-color);
+    border-radius:var(--border-radius);
 }
 img{
     display:block;
@@ -88,7 +137,7 @@ img{
 .pull-quote{
     margin:2rem 0;
     padding:1rem;
-    border-inline-start:.4rem solid var(--color-accent);
+    border-inline-start:.4rem solid var(--green);
     font-size:1.35rem;
 }
 .shape-portrait{
@@ -99,15 +148,19 @@ img{
 .documentation{
     grid-column:1/-1;
     padding:1rem;
-    background:#f1f1f1;
+    background: var(--white);
 }
 .contributors{
     align-self:start;
     padding:1rem;
-    border:1px solid var(--color-border);
+    border:1px solid var(--border-color);
+    background-color: var(--white);
 }
 .contributors img{
     width: 250px;
+}
+.c-heading{
+    font-size: 0.9em;
 }
 .c-images {
     display: flex;
@@ -136,7 +189,7 @@ img{
         position:relative;
         z-index:var(--layer-raised);
         margin-inline-start:-4rem;
-        background:var(--color-surface);
+        background:var(--light-green);
     }
     @supports (shape-outside:circle(50%)){
         .shape-portrait{
