@@ -109,12 +109,13 @@ img{
         position:sticky;
         inset-block-start:1rem;
         z-index:var(--layer-sticky);
+        width: 20ch;
     }
     .pull-quote{
         position:relative;
         z-index:var(--layer-raised);
         margin-inline-start:-4rem;
-        background:var(--color-surface);;
+        background:var(--color-surface);
     }
     @supports (shape-outside:circle(50%)){
         .shape-portrait{
@@ -123,9 +124,9 @@ img{
             shape-margin:1rem;}
         }
     }
-    @supports (clip-path:polygon(0 0)){
+    @supports (clip-path:inset(0.5% round 10%)){
         .feature-figure img{
-            clip-path:polygon(0 0,100% 5%,94% 100%,6% 94%);}
+            clip-path:inset(0.5% round 10%);}
         }
         :focus-visible{
             outline:.2rem solid var(--color-accent);
