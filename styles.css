@@ -113,6 +113,7 @@ img{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
 }
 @media (min-width:58rem){
@@ -152,3 +153,8 @@ img{
             outline:.2rem solid var(--color-accent);
             outline-offset:.2rem;
         }
+@media (max-width: 927px){
+    main{
+        max-width: 50rem;
+    }
+}
