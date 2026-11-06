@@ -58,7 +58,7 @@ h2, h3 {
     color: var(--dark-blue-gray);
 }
 .feature-header{
-    /* position:relative; */
+    position:relative;
     padding:clamp(2rem,7vw,6rem);
     background:var(--dark-blue-gray);
     color: var(--white);

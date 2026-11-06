@@ -77,22 +77,92 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Example only</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
+                        <td>main</td>
+                        <td>To hold the site content in a single grid.</td>
+                        <td>block</td>
+                        <td>
+                            display: grid <br>
+                            To create a single column for content in small viewports and three columns in large viewports.
+                        </td>
+                        <td>body</td>
+                        <td>
+                            https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/grid
+                            Date: 11/5/26
+                        </td>
+                        <td>
+                            Removed the grid property in Chrome DevTools and the aside containers with the navigation links get pushed back into normal flow.
+                        </td>
                     </tr>
                     <tr>
-                        <td>Example only</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
+                        <td>figure</td>
+                        <td>To create a container for images with captions.</td>
+                        <td>block</td>
+                        <td>
+                            position: relative
+                            To make the images position in the content relative to its parent section container.
+                        </td>
+                        <td>section</td>
+                        <td>
+                            https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position  <br>
+                            Date: 11/5/26
+                        </td>
+                        <td>
+                            Removed the relative positioning in Chrome DevTools but there was no visible difference.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>aside</td>
+                        <td>To create a floating section that sticks to the top of the page as a user scrolls.</td>
+                        <td>block</td>
+                        <td>
+                            position: sticky <br>
+                            To make the navigation bar stick to the top of the page as the user scrolls so navigation is always available.
+                        </td>
+                        <td>main</td>
+                        <td>
+                            https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position  <br>
+                            Date: 11/5/26
+                        </td>
+                        <td>
+                            Removed the sticky positioning in Chrome DevTools and the aside containers with the navigation links scroll with the page and go off screen.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>div</td>
+                        <td>To create a flex container to wrap logos to fit viewport width.</td>
+                        <td>block</td>
+                        <td>
+                            display: flex and flex-wrap: wrap <br>
+                            To make the logos wrap based on the width of the viewport so the logos fit evenly in their container.
+                        </td>
+                        <td>aside</td>
+                        <td>
+                            https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex
+                            Date: 11/5/26
+                        </td>
+                        <td>
+                            Removed both properties in Chrome DevTools and the logos display as block elements on top of each other.
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>blockquote</td>
+                        <td>
+                            To make a callout section for a quote within the article's content.
+                        </td>
+                        <td>block</td>
+                        <td>
+                            position: relative <br>
+                            To make the quote position in the content relative to its parent section container.
+                        </td>
+                        <td>section</td>
+                        <td>
+                            https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position  <br>
+                            Date: 11/5/26
+                        </td>
+                        <td>
+                            Removed the relative positioning in Chrome DevTools but there was no visible difference.
+                        </td>
                     </tr>
                 </tbody>
             </table>
