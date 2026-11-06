@@ -1,22 +1,7 @@
 /* CSS by Grant Lebans */
 /* Google Fonts */
+/* Rampart One font designed by Fontworks Inc.*/
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
-
-/* :root{
-    --color-text:#404040;
-    --color-surface:#fff;
-    --color-action:#8c1d40;
-    --color-accent:#ffc627;
-    --color-border:#d0d0d0;
-    --color-muted:#5c6670;
-    --space-3:1rem;
-    --radius:.5rem;
-    --measure:68ch;
-    --layer-base:0;
-    --layer-raised:10;
-    --layer-sticky:20;
-    --layer-overlay:30;
-} */
 
 :root {
     --off-white: #e8edd1;
@@ -35,8 +20,6 @@
     --border-color: var(--dark-gray);
     --gradient: linear-gradient(transparent 80%, var(--light-green));
     --space: 1rem;
-    --space-aside: 0.5rem;
-    --space-card: 1rem;
     --border-radius: 0.5rem;
     --btt-radius: 4rem;
     --drop-shadow: 3px 3px 3px var(--dark-blue-gray);
@@ -46,6 +29,9 @@
     --line-height: 1.6;
     --bold-font: 700;
     --content-width: 68ch;
+    --layer-raised:10;
+    --layer-sticky:20;
+    --layer-overlay:30;
 }
 
 *,*::before,*::after{
@@ -72,7 +58,7 @@ h2, h3 {
     color: var(--dark-blue-gray);
 }
 .feature-header{
-    position:relative;
+    /* position:relative; */
     padding:clamp(2rem,7vw,6rem);
     background:var(--dark-blue-gray);
     color: var(--white);
@@ -104,10 +90,10 @@ main{
     margin:auto;
     padding:var(--space);
 }
-article{
+.article{
     min-width:0;
 }
-article section{
+.article section{
     display:flow-root;
     margin-block:3rem;
     scroll-margin-block-start:6rem;
@@ -117,6 +103,7 @@ article section{
     padding:1rem;
     border:1px solid var(--border-color);
     background: var(--white);
+    box-shadow: var(--drop-shadow);
 }
 .story-guide a{
     display:block;
@@ -128,6 +115,7 @@ article section{
     padding:1rem;
     border:1px solid var(--border-color);
     border-radius:var(--border-radius);
+    box-shadow: var(--drop-shadow);
 }
 img{
     display:block;
@@ -144,18 +132,21 @@ img{
     width:min(45%,20rem);
     margin:0 1rem 1rem 0;
     border-radius:50%;
+    box-shadow: var(--drop-shadow);
 }
 .documentation{
     grid-column:1/-1;
     padding:1rem;
     background: var(--white);
     border: 1px solid var(--border-color);
+    box-shadow: var(--drop-shadow);
 }
 .contributors{
     align-self:start;
     padding:1rem;
     border:1px solid var(--border-color);
     background-color: var(--white);
+    box-shadow: var(--drop-shadow);
 }
 .contributors img{
     width: 250px;
@@ -170,6 +161,10 @@ img{
     justify-content: center;
     gap: 1rem;
 }
+:focus-visible{
+            outline:.2rem solid var(--green);
+            outline-offset:.2rem;
+        }
 @media (min-width:58rem){
     main{
         grid-template-columns:14rem 1fr 11rem;
@@ -202,11 +197,8 @@ img{
     @supports (clip-path:inset(0.5% round 10%)){
         .feature-figure img{
             clip-path:inset(0.5% round 10%);}
-        }
-        :focus-visible{
-            outline:.2rem solid var(--color-accent);
-            outline-offset:.2rem;
-        }
+    }
+        
 @media (max-width: 927px){
     main{
         max-width: 50rem;
